@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buyurtma | King Shaurma Samarqand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-crown">♛</span>
+        <span class="logo-text">King <strong>SHAURMA</strong></span>
+      </a>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="index.html" class="nav__link">Bosh sahifa</a></li>
+        <li><a href="menu.html" class="nav__link">Menyu</a></li>
+        <li><a href="order.html" class="nav__link active">Buyurtma</a></li>
+        <li><a href="track.html" class="nav__link">Kuzatish</a></li>
+        <li><a href="contact.html" class="nav__link">Aloqa</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="order.html" class="nav__cart">
+          <i class="fas fa-shopping-basket"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <button class="nav__toggle" id="navToggle"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1 class="page-hero__title">Sizning <span class="text-gold">Savatingiz</span></h1>
+      <p class="page-hero__sub">Buyurtmani tekshiring va tasdiqlang</p>
+    </div>
+  </div>
+
+  <section class="order-page section">
+    <div class="container">
+      <div class="order__layout">
+
+        <!-- CART -->
+        <div class="order__cart">
+          <h2 class="order__section-title"><i class="fas fa-shopping-basket"></i> Savat</h2>
+          <div class="cart__items" id="cartItems">
+            <!-- Rendered by JS -->
+          </div>
+          <div class="cart__empty hidden" id="cartEmpty">
+            <div class="empty-icon">🛒</div>
+            <h3>Savat bo'sh</h3>
+            <p>Menyudan taomlar qo'shing</p>
+            <a href="menu.html" class="btn btn--primary">Menyuga o'tish</a>
+          </div>
+        </div>
+
+        <!-- ORDER FORM -->
+        <div class="order__form-wrap" id="orderFormWrap">
+          <!-- Delivery Type -->
+          <div class="delivery-type">
+            <h2 class="order__section-title"><i class="fas fa-truck"></i> Yetkazib berish usuli</h2>
+            <div class="delivery-options">
+              <label class="delivery-option">
+                <input type="radio" name="delivery" value="delivery" checked />
+                <div class="delivery-option__card">
+                  <i class="fas fa-motorcycle"></i>
+                  <span>Yetkazib berish</span>
+                  <small>+5 000 so'm</small>
+                </div>
+              </label>
+              <label class="delivery-option">
+                <input type="radio" name="delivery" value="pickup" />
+                <div class="delivery-option__card">
+                  <i class="fas fa-store"></i>
+                  <span>O'zi olib ketish</span>
+                  <small>Bepul</small>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Customer Info -->
+          <div class="customer-form">
+            <h2 class="order__section-title"><i class="fas fa-user"></i> Ma'lumotlaringiz</h2>
+            <form id="orderForm" novalidate>
+              <div class="form-group">
+                <label class="form-label">Ismingiz *</label>
+                <input type="text" id="custName" class="form-input" placeholder="Ism Familiya" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Telefon raqam *</label>
+                <div class="phone-input-wrap">
+                  <span class="phone-prefix">+998</span>
+                  <input type="tel" id="custPhone" class="form-input" placeholder="93 992 11 11" required maxlength="12" />
+                </div>
+              </div>
+              <div class="form-group" id="addressGroup">
+                <label class="form-label">Manzil *</label>
+                <input type="text" id="custAddress" class="form-input" placeholder="Ko'cha, uy raqami" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Izoh (ixtiyoriy)</label>
+                <textarea id="custNote" class="form-input form-textarea" placeholder="Qo'shimcha xohishlar..."></textarea>
+              </div>
+            </form>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="order-summary">
+            <h2 class="order__section-title"><i class="fas fa-receipt"></i> Buyurtma xulosasi</h2>
+            <div class="summary__lines">
+              <div class="summary__line">
+                <span>Taomlar narxi</span>
+                <span id="sumItems">0 so'm</span>
+              </div>
+              <div class="summary__line" id="deliveryLine">
+                <span>Yetkazib berish</span>
+                <span>5 000 so'm</span>
+              </div>
+              <div class="summary__line summary__line--total">
+                <span>Jami</span>
+                <span id="sumTotal">0 so'm</span>
+              </div>
+            </div>
+            <div class="confirm-hint">
+              <i class="fab fa-telegram"></i>
+              Buyurtma Telegram orqali tasdiqlanadi
+            </div>
+            <button class="btn btn--primary btn--full" id="placeOrderBtn">
+              <i class="fas fa-check-circle"></i> Buyurtma berish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay hidden" id="successModal">
+    <div class="modal">
+      <div class="modal__icon">✅</div>
+      <h2 class="modal__title">Buyurtma qabul qilindi!</h2>
+      <p class="modal__text">Buyurtma raqamingiz:</p>
+      <div class="modal__order-num" id="modalOrderNum">#0000</div>
+      <p class="modal__text">Tez orada operatorimiz siz bilan bog'lanadi.</p>
+      <a href="track.html" class="btn btn--primary">Buyurtmani kuzatish</a>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer__bottom" style="justify-content:center;"><p>© 2025 King Shaurma | Dahbet 16, Samarqand</p></div></div></footer>
+  <button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="app.js"></script>
+</body>
+</html>
