@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>King Shaurma | Samarqand</title>
+  <meta name="description" content="Samarqandning eng mazali shaurmasi. Tez yetkazib berish, yangi mahsulotlar, arzon narxlar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ====== STICKY HEADER ====== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-crown">♛</span>
+        <span class="logo-text">King <strong>SHAURMA</strong></span>
+      </a>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="index.html" class="nav__link active">Bosh sahifa</a></li>
+        <li><a href="menu.html" class="nav__link">Menyu</a></li>
+        <li><a href="order.html" class="nav__link">Buyurtma</a></li>
+        <li><a href="track.html" class="nav__link">Kuzatish</a></li>
+        <li><a href="contact.html" class="nav__link">Aloqa</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="order.html" class="nav__cart">
+          <i class="fas fa-shopping-basket"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="hero">
+    <div class="hero__bg-pattern"></div>
+    <div class="hero__glow"></div>
+    <div class="container hero__content">
+      <div class="hero__badge">
+        <i class="fas fa-star"></i> Samarqandning #1 Shaurmasi
+      </div>
+      <h1 class="hero__title">
+        Haqiqiy<br/>
+        <span class="hero__highlight">Shaurma</span><br/>
+        Ta'mi
+      </h1>
+      <p class="hero__subtitle">
+        Eng yangi mahsulotlar, maxsus sous va sevgi bilan tayyorlangan<br/>
+        Samarqandning eng mashhur shaurmasi — siz uchun!
+      </p>
+      <div class="hero__actions">
+        <a href="order.html" class="btn btn--primary btn--lg">
+          <i class="fas fa-fire"></i> Hozir buyurtma qilish
+        </a>
+        <a href="menu.html" class="btn btn--outline btn--lg">
+          <i class="fas fa-utensils"></i> Menyuni ko'rish
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">500+</span>
+          <span class="hero__stat-label">Kunlik buyurtma</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">4.9★</span>
+          <span class="hero__stat-label">Reyting</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">30 daq</span>
+          <span class="hero__stat-label">Yetkazib berish</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__image">
+      <div class="hero__food-circle">
+        <div class="hero__food-emoji">🌯</div>
+        <div class="hero__orbit hero__orbit--1">🍕</div>
+        <div class="hero__orbit hero__orbit--2">🍔</div>
+        <div class="hero__orbit hero__orbit--3">🥤</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MASHHUR TAOMLAR ====== -->
+  <section class="popular section">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Eng Ko'p Buyuriladigan</span>
+        <h2 class="section__title">Mashhur <span class="text-gold">Taomlar</span></h2>
+        <p class="section__subtitle">Mijozlarimiz eng ko'p yoqtirgan taomlar</p>
+      </div>
+
+      <div class="popular__grid" id="popularGrid">
+        <!-- Skeleton loader -->
+        <div class="card card--skeleton"><div class="skeleton skeleton--img"></div><div class="skeleton skeleton--text"></div><div class="skeleton skeleton--text skeleton--short"></div></div>
+        <div class="card card--skeleton"><div class="skeleton skeleton--img"></div><div class="skeleton skeleton--text"></div><div class="skeleton skeleton--text skeleton--short"></div></div>
+        <div class="card card--skeleton"><div class="skeleton skeleton--img"></div><div class="skeleton skeleton--text"></div><div class="skeleton skeleton--text skeleton--short"></div></div>
+        <div class="card card--skeleton"><div class="skeleton skeleton--img"></div><div class="skeleton skeleton--text"></div><div class="skeleton skeleton--text skeleton--short"></div></div>
+      </div>
+
+      <div class="section__cta">
+        <a href="menu.html" class="btn btn--primary">
+          Barcha taomlarni ko'rish <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== NIMA UCHUN BIZ ====== -->
+  <section class="features section">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Afzalliklarimiz</span>
+        <h2 class="section__title">Nima Uchun <span class="text-gold">Biz?</span></h2>
+      </div>
+      <div class="features__grid">
+        <div class="feature-card" data-aos="fade-up" data-delay="0">
+          <div class="feature-card__icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="feature-card__title">Tez Yetkazib Berish</h3>
+          <p class="feature-card__text">
+            30 daqiqa ichida eshigingizga yetkazamiz. Kechiksa — keyingi buyurtma bepul!
+          </p>
+          <div class="feature-card__num">01</div>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-delay="150">
+          <div class="feature-card__icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 class="feature-card__title">Yangi Mahsulotlar</h3>
+          <p class="feature-card__text">
+            Faqat bugun kelgan yangi go'sht va sabzavotlar. Sifat nazorati har kuni.
+          </p>
+          <div class="feature-card__num">02</div>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-delay="300">
+          <div class="feature-card__icon">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3 class="feature-card__title">Arzon Narxlar</h3>
+          <p class="feature-card__text">
+            Sifatli taom uchun qimmat to'lash shart emas. Eng yaxshi narx kafolati.
+          </p>
+          <div class="feature-card__num">03</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROMO BANNER ====== -->
+  <section class="promo section">
+    <div class="container">
+      <div class="promo__card">
+        <div class="promo__content">
+          <span class="promo__badge">🔥 Aksiya</span>
+          <h2 class="promo__title">2 ta shaurma olsang — <span class="text-gold">Pepsi sovg'a!</span></h2>
+          <p class="promo__text">Faqat bugun va ertaga. Cheklangan taklif!</p>
+          <a href="order.html" class="btn btn--primary">Hozir foydalanish</a>
+        </div>
+        <div class="promo__timer" id="promoTimer">
+          <div class="timer-block"><span class="timer-num" id="timerH">23</span><span class="timer-label">soat</span></div>
+          <div class="timer-sep">:</div>
+          <div class="timer-block"><span class="timer-num" id="timerM">59</span><span class="timer-label">daqiqa</span></div>
+          <div class="timer-sep">:</div>
+          <div class="timer-block"><span class="timer-num" id="timerS">59</span><span class="timer-label">soniya</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== INSTAGRAM PLACEHOLDER ====== -->
+  <section class="instagram section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title"><i class="fab fa-instagram text-gold"></i> Instagram</h2>
+        <p class="section__subtitle">@king_shaurma_samarqand — bizni kuzating!</p>
+      </div>
+      <div class="instagram__grid">
+        <div class="insta-post" style="--i:1">🌯</div>
+        <div class="insta-post" style="--i:2">🍕</div>
+        <div class="insta-post" style="--i:3">🍔</div>
+        <div class="insta-post" style="--i:4">🥤</div>
+        <div class="insta-post" style="--i:5">🌮</div>
+        <div class="insta-post" style="--i:6">🍟</div>
+      </div>
+      <div class="section__cta">
+        <a href="https://instagram.com/king_shaurma_samarqand" class="btn btn--outline" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram'da kuzatish
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <span class="logo-crown">♛</span>
+            <span class="logo-text">King <strong>SHAURMA</strong></span>
+          </a>
+          <p class="footer__desc">Samarqandning eng mazali va tez shaurmasi. Sevgi bilan tayyorlanadi!</p>
+          <div class="footer__socials">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <h4 class="footer__heading">Sahifalar</h4>
+          <ul>
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="menu.html">Menyu</a></li>
+            <li><a href="order.html">Buyurtma</a></li>
+            <li><a href="track.html">Kuzatish</a></li>
+            <li><a href="contact.html">Aloqa</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4 class="footer__heading">Kategoriyalar</h4>
+          <ul>
+            <li><a href="menu.html?cat=shaurma">Shaurma</a></li>
+            <li><a href="menu.html?cat=pizza">Pizza</a></li>
+            <li><a href="menu.html?cat=burger">Burger</a></li>
+            <li><a href="menu.html?cat=drink">Ichimliklar</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4 class="footer__heading">Aloqa</h4>
+          <div class="footer__info">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+998939921111">(93) 992 11 11</a>
+          </div>
+          <div class="footer__info">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Dahbet 16, Samarqand</span>
+          </div>
+          <div class="footer__info">
+            <i class="fas fa-clock"></i>
+            <span>09:00 – 23:00 (har kuni)</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 King Shaurma. Barcha huquqlar himoyalangan.</p>
+        <a href="admin.html" class="footer__admin-link">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== SCROLL TO TOP ====== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Tepaga qaytish">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ====== TOAST ====== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
