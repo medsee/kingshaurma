@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aloqa | King Shaurma Samarqand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-crown">♛</span>
+        <span class="logo-text">King <strong>SHAURMA</strong></span>
+      </a>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="index.html" class="nav__link">Bosh sahifa</a></li>
+        <li><a href="menu.html" class="nav__link">Menyu</a></li>
+        <li><a href="order.html" class="nav__link">Buyurtma</a></li>
+        <li><a href="track.html" class="nav__link">Kuzatish</a></li>
+        <li><a href="contact.html" class="nav__link active">Aloqa</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="order.html" class="nav__cart"><i class="fas fa-shopping-basket"></i><span class="cart-badge" id="cartBadge">0</span></a>
+        <button class="nav__toggle" id="navToggle"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1 class="page-hero__title">Biz bilan <span class="text-gold">Bog'lanish</span></h1>
+      <p class="page-hero__sub">Savollaringiz bo'lsa — doimo yordam berishga tayyormiz</p>
+    </div>
+  </div>
+
+  <section class="contact-page section">
+    <div class="container">
+      <div class="contact__layout">
+
+        <!-- Info Cards -->
+        <div class="contact__info">
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h3>Telefon</h3>
+              <a href="tel:+998939921111" class="contact-card__link">(93) 992 11 11</a>
+              <p class="contact-card__note">09:00 – 23:00</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h3>Manzil</h3>
+              <p class="contact-card__link">Dahbet 16, Samarqand</p>
+              <p class="contact-card__note">Ko'chib yurmaymiz 😄</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h3>Ish vaqti</h3>
+              <div class="hours-table">
+                <div class="hours-row"><span>Du – Ju</span><span>09:00 – 23:00</span></div>
+                <div class="hours-row"><span>Shanba</span><span>10:00 – 23:00</span></div>
+                <div class="hours-row"><span>Yakshanba</span><span>10:00 – 22:00</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="fab fa-instagram"></i></div>
+            <div>
+              <h3>Ijtimoiy tarmoqlar</h3>
+              <a href="https://instagram.com/king_shaurma_samarqand" target="_blank" class="contact-card__link">@king_shaurma_samarqand</a>
+              <div class="social-btns">
+                <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Map + Form -->
+        <div class="contact__right">
+          <!-- Google Maps -->
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.2!2d66.9597!3d39.6270!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDM3JzM3LjIiTiA2NsKwNTcnMzQuOSJF!5e0!3m2!1suz!2suz!4v1700000000000!5m2!1suz!2suz"
+              width="100%" height="300" style="border:0; border-radius:16px;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="King Shaurma joylashuvi">
+            </iframe>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap">
+            <h2 class="order__section-title"><i class="fas fa-envelope"></i> Murojaat qiling</h2>
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Ismingiz *</label>
+                  <input type="text" id="contName" class="form-input" placeholder="Ismingiz" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Telefon *</label>
+                  <input type="tel" id="contPhone" class="form-input" placeholder="+998 XX XXX XX XX" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Mavzu</label>
+                <select id="contSubject" class="form-input">
+                  <option>Buyurtma haqida savol</option>
+                  <option>Sifat haqida fikr</option>
+                  <option>Hamkorlik taklifi</option>
+                  <option>Boshqa</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Xabar *</label>
+                <textarea id="contMessage" class="form-input form-textarea" rows="5" placeholder="Xabaringizni yozing..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">
+                <i class="fas fa-paper-plane"></i> Yuborish
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer__bottom" style="justify-content:center;"><p>© 2025 King Shaurma | Dahbet 16, Samarqand</p></div></div></footer>
+  <button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="app.js"></script>
+</body>
+</html>
