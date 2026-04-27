@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | King Shaurma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="admin-body">
+
+  <!-- ====== LOGIN SCREEN ====== -->
+  <div class="admin-login" id="adminLogin">
+    <div class="admin-login__card">
+      <div class="admin-login__logo">
+        <span class="logo-crown" style="font-size:3rem;">♛</span>
+        <h1>King SHAURMA</h1>
+        <p>Admin Panel</p>
+      </div>
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label class="form-label">Foydalanuvchi nomi</label>
+          <input type="text" id="loginUser" class="form-input" placeholder="admin" value="admin" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Parol</label>
+          <div style="position:relative;">
+            <input type="password" id="loginPass" class="form-input" placeholder="••••••••" value="admin123" />
+            <button type="button" class="pwd-toggle" id="pwdToggle"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+        <p class="login-hint">Demo: admin / admin123</p>
+        <button type="submit" class="btn btn--primary btn--full">
+          <i class="fas fa-sign-in-alt"></i> Kirish
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ====== ADMIN PANEL ====== -->
+  <div class="admin-panel hidden" id="adminPanel">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="sidebar__logo">
+        <span class="logo-crown">♛</span>
+        <span>King SHAURMA</span>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="#" class="sidebar__link active" data-tab="dashboard">
+          <i class="fas fa-chart-line"></i> Dashboard
+        </a>
+        <a href="#" class="sidebar__link" data-tab="orders">
+          <i class="fas fa-list-alt"></i> Buyurtmalar
+        </a>
+        <a href="#" class="sidebar__link" data-tab="menu">
+          <i class="fas fa-utensils"></i> Menyu
+        </a>
+        <a href="#" class="sidebar__link" data-tab="stats">
+          <i class="fas fa-chart-bar"></i> Statistika
+        </a>
+      </nav>
+      <button class="sidebar__logout" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i> Chiqish
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <button class="admin-menu-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+        <h2 class="admin-topbar__title" id="adminPageTitle">Dashboard</h2>
+        <div class="admin-topbar__user">
+          <i class="fas fa-user-shield"></i> Admin
+        </div>
+      </div>
+
+      <!-- ======= DASHBOARD TAB ======= -->
+      <div class="admin-tab active" id="tab-dashboard">
+        <div class="dashboard-stats">
+          <div class="dash-card">
+            <div class="dash-card__icon dash-card__icon--gold"><i class="fas fa-shopping-bag"></i></div>
+            <div class="dash-card__info">
+              <p class="dash-card__label">Bugungi buyurtmalar</p>
+              <h3 class="dash-card__num" id="statOrders">47</h3>
+              <span class="dash-card__trend up">+12% kechadan</span>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card__icon dash-card__icon--green"><i class="fas fa-money-bill-wave"></i></div>
+            <div class="dash-card__info">
+              <p class="dash-card__label">Bugungi tushum</p>
+              <h3 class="dash-card__num" id="statRevenue">2 350 000</h3>
+              <span class="dash-card__trend up">+8% kechadan</span>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card__icon dash-card__icon--blue"><i class="fas fa-star"></i></div>
+            <div class="dash-card__info">
+              <p class="dash-card__label">O'rtacha reyting</p>
+              <h3 class="dash-card__num">4.9 ★</h3>
+              <span class="dash-card__trend up">Ajoyib!</span>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card__icon dash-card__icon--red"><i class="fas fa-clock"></i></div>
+            <div class="dash-card__info">
+              <p class="dash-card__label">Kutilayotgan</p>
+              <h3 class="dash-card__num" id="statPending">5</h3>
+              <span class="dash-card__trend">Hozir</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-popular">
+          <h3 class="admin-section-title">Eng Ommabop Taomlar</h3>
+          <div class="popular-items" id="popularItems">
+            <div class="popular-item"><span class="pop-rank">1</span><span class="pop-emoji">🌯</span><span class="pop-name">Shaurma Classic</span><span class="pop-count">124 ta</span></div>
+            <div class="popular-item"><span class="pop-rank">2</span><span class="pop-emoji">🍕</span><span class="pop-name">Margarita Pizza</span><span class="pop-count">87 ta</span></div>
+            <div class="popular-item"><span class="pop-rank">3</span><span class="pop-emoji">🍔</span><span class="pop-name">King Burger</span><span class="pop-count">63 ta</span></div>
+            <div class="popular-item"><span class="pop-rank">4</span><span class="pop-emoji">🌯</span><span class="pop-name">Shaurma XXL</span><span class="pop-count">55 ta</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= ORDERS TAB ======= -->
+      <div class="admin-tab" id="tab-orders">
+        <div class="admin-tab-header">
+          <h3 class="admin-section-title">Buyurtmalar Ro'yxati</h3>
+          <div class="orders-filter">
+            <select class="form-input" id="orderStatusFilter" style="max-width:200px;">
+              <option value="all">Barcha statuslar</option>
+              <option value="new">Yangi</option>
+              <option value="preparing">Tayyorlanmoqda</option>
+              <option value="onway">Yo'lda</option>
+              <option value="done">Yetkazildi</option>
+            </select>
+          </div>
+        </div>
+        <div class="orders-table-wrap">
+          <table class="orders-table" id="ordersTable">
+            <thead>
+              <tr>
+                <th>Raqam</th>
+                <th>Mijoz</th>
+                <th>Telefon</th>
+                <th>Taomlar</th>
+                <th>Summa</th>
+                <th>Status</th>
+                <th>Amal</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ======= MENU TAB ======= -->
+      <div class="admin-tab" id="tab-menu">
+        <div class="admin-tab-header">
+          <h3 class="admin-section-title">Menyu Boshqaruvi</h3>
+          <button class="btn btn--primary" id="addItemBtn">
+            <i class="fas fa-plus"></i> Taom qo'shish
+          </button>
+        </div>
+        <div class="admin-menu-grid" id="adminMenuGrid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- ======= STATS TAB ======= -->
+      <div class="admin-tab" id="tab-stats">
+        <h3 class="admin-section-title">Haftalik Statistika</h3>
+        <div class="chart-wrap">
+          <canvas id="revenueChart" height="300"></canvas>
+        </div>
+        <div class="chart-wrap" style="margin-top:2rem;">
+          <canvas id="ordersChart" height="200"></canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Menu Item Modal -->
+  <div class="modal-overlay hidden" id="menuItemModal">
+    <div class="modal" style="max-width:500px;">
+      <h2 class="modal__title" id="menuModalTitle">Taom qo'shish</h2>
+      <form id="menuItemForm">
+        <input type="hidden" id="editItemId" />
+        <div class="form-group">
+          <label class="form-label">Taom nomi *</label>
+          <input type="text" id="itemName" class="form-input" placeholder="Masalan: Shaurma Classic" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Narxi (so'm) *</label>
+            <input type="number" id="itemPrice" class="form-input" placeholder="25000" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kategoriya *</label>
+            <select id="itemCategory" class="form-input">
+              <option value="shaurma">Shaurma</option>
+              <option value="pizza">Pizza</option>
+              <option value="burger">Burger</option>
+              <option value="drink">Ichimlik</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tarkib</label>
+          <input type="text" id="itemIngredients" class="form-input" placeholder="Lavash, go'sht, sabzavot..." />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Emoji (rasm o'rniga)</label>
+          <input type="text" id="itemEmoji" class="form-input" placeholder="🌯" maxlength="4" />
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="itemPopular" />
+          <label for="itemPopular">Mashhur taom (bosh sahifada ko'rsatilsin)</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="itemAvailable" checked />
+          <label for="itemAvailable">Mavjud (sotuvda bor)</label>
+        </div>
+        <div style="display:flex;gap:1rem;margin-top:1.5rem;">
+          <button type="submit" class="btn btn--primary" style="flex:1;">Saqlash</button>
+          <button type="button" class="btn btn--outline" style="flex:1;" id="cancelMenuModal">Bekor qilish</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="app.js"></script>
+</body>
+</html>
